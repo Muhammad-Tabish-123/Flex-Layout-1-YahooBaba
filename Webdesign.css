@@ -1,0 +1,166 @@
+*{
+   box-sizing: border-box;
+}
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   /* display: flex;
+   flex-direction: column; */
+   margin: 0;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: #566c2b;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+header a{
+    /* text-decoration: none;    */
+    color: #fff;
+}
+#menu li{
+    padding: 10px;
+}
+
+#logo{
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#social-links li{
+    padding: 10px;
+}
+
+#main{
+    display: flex;
+}
+aside{
+    padding: 10px;
+    flex: 0 0 20vw;
+    background-color: beige;
+    /* flex-shrink: 0;
+    flex-basis: 300px;
+    width: 300px; */
+}
+aside ul{
+    list-style: none;
+    padding: 0;
+}
+aside ul a{
+    color: #566c2b;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    display: block;
+}
+aside img{
+    width: 100%;
+}
+/* aside ul li{
+    border-bottom: 1px solid rgb(105, 105, 105);
+} */
+article{
+    padding: 10px;
+}
+.services-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.service-box{
+    border: 1px solid #eee;
+    width: 32%;
+    max-width: 370px;
+   /* flex-basis: 32%; */
+   padding: 10px;
+   margin-bottom: 15px;
+   display: flex;
+   flex-direction: column;
+}
+.service-box img{
+    width: 100%;
+}
+
+
+.service-box h3{
+    margin: 5px 0 10px;
+}
+.service-box p{
+    margin: 0 0 10px;
+}
+.call-to-action{
+    align-self: start;
+    margin-top: auto;
+}
+.call-to-action a{
+    color: #fff;
+    background-color: grey;
+    border: 2px solid transparent;
+    padding: 8px 13px;
+    display: block;
+}
+.call-to-action a:hover{
+    color: grey;
+    background-color: #fff;
+    border: 2px solid grey;
+}
+footer{
+    background-color: #566c2b;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .service-box{
+        /* background-color: aqua; */
+        width: 49%;
+    }
+    aside{
+        flex-basis: 29vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .services-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-box{
+        /* background-color: aqua; */
+        width: auto;
+        max-width: 100%;
+    }
+   #main{
+    flex-direction: column;
+   }
+   article{
+    order: -1;
+   }
+  h2{
+    text-align: center;
+  }
+  header{
+    flex-flow: column;
+  }
+  #logo{
+    order: -1;
+  }
+  .call-to-action{
+    margin-top: 10px;
+  }
+  .service-box p{
+    margin-top: 5px;
+  }
+  .service-box{
+    margin-bottom: 20px;
+  }
+}
